@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header class="bold">Python Documentation</header>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#Getting_Started_with_Python" class="nav-link">Getting Started with Python</a></li>
+            <li><a href="#Hello,_World!" class="nav-link">Hello, World!</a></li>
+            <li><a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a></li>
+            <li><a href="#Control_Flow" class="nav-link">Control Flow</a></li>
+            <li><a href="#Functions" class="nav-link">Functions</a></li>
+            <li><a href="#Classes_and_Objects" class="nav-link">Classes and Objects</a></li>
+            <li><a href="#Inheritance" class="nav-link">Inheritance</a></li>
+            <li><a href="#Importing_Modules" class="nav-link">Importing Modules</a></li>
+            <li><a href="#Creating_a_Package" class="nav-link">Creating a Package</a></li>
+            <li><a href="#Popular_Libraries" class="nav-link">Popular Libraries</a></li>
+            <li><a href="#Error_Handling" class="nav-link">Error Handling</a></li>
+            <li><a href="#Try-Except_Block" class="nav-link">Try-Except Block</a></li>
+            <li><a href="#Conclusion" class="nav-link">Conclusion</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+                <article>
+                <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+    
+                </article>        
+        </section>
+        <section class="main-section" id="Getting_Started_with_Python">
+            <header>Getting Started with Python</header>
+            <article>
+                <h3>Installation</h3>
+                <p>To install Python, visit the <a href="https://www.python.org/downloads/" rel="external" target="_blank">official Python website</a> and download the latest version. Python comes with a built-in package manager called <code class="p-code">pip</code>, which makes installing additional libraries easy.</p>
+                <h4 class="bold">Steps to install:</h4>
+                <ol>
+                    <li>Download the Python installer.</li>
+                    <li>Run the installer and check the option "Add Python to PATH".</li>
+                    <li>Verify the installation by opening the terminal and typing:<code class="li-code">python --version</code></li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Hello,_World!">
+            <header>Hello, World!</header>
+            <article>
+                <p>The first step in learning any programming language is writing a simple "Hello, World!" program.</p>
+                <p>Here’s how you do it in Python:</p>
+                <code><span class="built-in">print</span>(<span class="string">"Hello, World!"</span>)</code>
+                <p>To run the script, save the code in a file with a .py extension and run:</p>
+                <code>python filename.py</code>
+            </article>
+        </section>
+        <section class="main-section" id="Variables_and_Data_Types">
+            <header>Variables and Data Types</header>
+            <article>
+                <p>In Python, variables do not need explicit declaration. Python's dynamic typing allows you to assign a variable without specifying its type.</p>
+                <code><span class="display-block"></span>name = <span class="string">"Alice"</span>  <span class="comment"># string</span></span>
+                    <span class="display-block">age = <span class="string">25</span>        <span class="comment"># integer</span></span>
+                    <span class="display-block">is_student = <span class="string">True</span>  <span class="comment"># boolean</span></span></code>
+                <p>Python supports the following basic data types:</p>
+                <ul>
+                    <li><span class="bold">int</span>: for integers</li>
+                    <li><span class="bold">float</span>: for floating-point numbers</li>
+                    <li><span class="bold">str</span>: for strings</li>
+                    <li><span class="bold">bool</span>: for boolean values</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Control_Flow">
+            <header>Control Flow</header>
+            <article>
+                <p>Python uses indentation to define the structure of control flow statements such as <code class="p-code">if</code>, <code class="p-code">for</code>, and <code class="p-code">while</code>.</p>
+                <h3>If Statements</h3>
+                <code><span class="display-block">age = <span class="number">18</span></span>
+                    <span class="display-block"><span class="function">if</span> age >= <span class="number">18</span>:</span>
+                    <span class="display-block left-indent"><span class="built-in">print</span>(<span class="string">"You are an adult."</span>)</span>
+                    <span class="display-block"><span class="function">else</span>:</span>
+                        <span class="display-block left-indent"><span class="built-in">print</span>(<span class="string">"You are a minor."</span>)</span>
+                </code>
+                <h3>Loops</h3>
+                <code><span class="comment display-block"># For loop example</span>
+                    <span class="display-block"><span class="function">for</span> i <span class="function">in</span> <span class="built-in">range</span>(<span class="number">5</span>):</span>
+                        <span class="display-block left-indent"><span class="built-in">print</span>(i)</span>
+                    
+                    <span class="comment display-block"># While loop example</span>
+                    <span class="display-block">count = <span class="number">0</span></span>
+                    <span class="display-block"><span class="function">while</span> count < <span class="number">5</span>:</span>
+                        <span class="display-block left-indent"><span class="built-in">print</span>(count)</span>
+                        <span class="display-block left-indent">count += <span class="number">1</span></span></code>
+            </article>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <article>
+                <p>Functions are a way to encapsulate code that performs a specific task. Python uses the def keyword to define functions.</p>
+                <code>
+                <span class="display-block"><span class="function">def</span> <span class="custom-function">greet</span>(name):</span>
+                    <span class="display-block left-indent"><span class="function">return</span> <span class="string">f"Hello, {name}!"</span></span>
+                <span class="display-block">&nbsp;</span>
+                <span class="display-block"><span class="built-in">print</span>(greet(<span class="string">"Alice"</span>))</span></code>
+            </article>
+        </section>
+        <section class="main-section" id="Classes_and_Objects">
+            <header>Classes and Objects</header>
+            <article>
+                <p>Python supports object-oriented programming (OOP), allowing you to model real-world entities using classes and objects.</p>
+                <pre><code><span class="function">class</span> <span class="custom-function">Dog</span>:
+    <span class="function">def</span> <span class="custom-function">__init__</span>(self, name, breed):
+        self.name = name
+        self.breed = breed
+        
+    <span class="function">def</span> <span class="custom-function">bark</span>(self):
+        <span class="built-in">print</span>(<span class="string">f"{self.name} says woof!"</span>)
+    
+<span class="comment"># Creating an object</span>
+dog1 = Dog(<span class="string">"Buddy", "Golden Retriever"</span>)
+dog1.bark()</code></pre>
+            </article>
+        </section>
+        <section class="main-section" id="Inheritance">
+            <header>Inheritance</header>
+            <article>
+                <p>Inheritance allows you to create a new class that inherits attributes and methods from another class.</p>
+                <pre><code><span class="function">class</span> <span class="custom-function">Animal</span>:
+    <span class="function">def</span> <span class="custom-function">__init__</span>(self, name):
+         self.name = name
+    
+    <span class="function">def</span> <span class="custom-function">speak</span>(self):
+        <span class="built-in">print</span>(<span class="string">"Animal sound"</span>)
+    
+<span class="function">class</span> <span class="custom-function">Cat</span>(<span class="custom-function">Animal</span>):
+    <span class="function">def</span> <span class="custom-function">speak</span>(self):
+        <span class="built-in">print</span>(<span class="string">f"{self.name} says meow!"</span>)
+    
+cat1 = Cat(<span class="string">"Whiskers"</span>)
+cat1.speak()</code></pre>
+            </article>
+        </section>
+        <section class="main-section" id="Importing_Modules">
+            <header>Importing Modules</header>
+            <article>
+                <p>Modules in Python are simply Python files with <span class="p-code">.py</span> extension. You can import and reuse code from other modules using the <span class="p-code">import</span> statement.</p>
+                <pre><code><span class="function">import</span> math
+<span class="built-in">print</span>(math.sqrt(<span class="number">16</span>))  <span class="comment"># Output: 4.0</span></code></pre></article>
+        </section>
+        <section class="main-section" id="Creating_a_Package">
+                <header>Creating a Package</header>
+            <article>
+                <p>Packages are directories that contain multiple modules and an <code class="p-code">__init__.py</code> file. The <code class="p-code">__init__.py</code> file ensures that the directory is treated as a package.</p>
+        </section>
+        <section class="main-section" id="Popular_Libraries">
+                <header>Popular Libraries</header>
+            <article>
+                <p>Some widely used Python libraries include:</p>
+                <ul>
+                    <li><span class="bold">NumPy</span>: for numerical computations.</li>
+                    <li><span class="bold">Pandas</span>: for data manipulation and analysis.</li>
+                    <li><span class="bold">Matplotlib</span>: for data visualization.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Error_Handling">
+            <header>Error Handling</header>
+            <article><p>Python handles errors through exceptions. Common exceptions include <code class="p-code">ValueError</code>, <code class="p-code">TypeError</code>, and <code class="p-code">FileNotFoundError.</code></p></article>
+        </section>
+        <section class="main-section" id="Try-Except_Block">
+            <header>Try-Except Block</header>
+            <article>
+                <p>The <code class="p-code">try-except</code> block allows you to handle errors gracefully without crashing the program.</p>
+                <pre><code><span class="function">try</span>:
+    result = <span class="number">10</span> / <span class="number">0</span>
+<span class="function">except</span> ZeroDivisionError:
+    <span class="built-in">print</span>(<span class="string">"You can't divide by zero!"</span>)</code></pre>
+            </article>
+        </section>
+        <section class="main-section" id="Conclusion">
+            <header>Conclusion</header>
+            <article><p>Python is a versatile and powerful language that is easy to learn and highly adaptable. Its wide range of libraries and frameworks make it suitable for various fields such as web development, data analysis, artificial intelligence, and automation.</p></article>
+        </section>
+    </main>
+</body>
+</html>
