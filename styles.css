@@ -141,8 +141,8 @@ code:not(.p-code) {
         overflow-y: auto;
     }
     #main-doc {
-        margin-left: 0;
-        margin-top: 290px;
+        margin: 290px 0 0;
+        padding: 0;
         border: 0;
         width: 100%;
         min-width: 290px;
